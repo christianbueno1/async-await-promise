@@ -28,5 +28,12 @@ console.log(answer);
 // console.log("hello");
 
 function lookUpFruit (name, prop) {
-
+    for(let i = 0; i < fruits.length; i++){
+        if( fruits[i].name === name)
+            return fruits[i][prop] || "No such property";
+    }
+    return "No such fruit name";
 }
+
+let ans = lookUpFruit("mango", "pricee");
+console.log(ans);
