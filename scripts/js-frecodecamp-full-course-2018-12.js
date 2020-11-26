@@ -84,3 +84,26 @@ console.log(boolfoo);
 console.log(typeof('hello') === 'string');
 console.log(typeof(7) === 'number');
 console.log(typeof(7 * 'hello') === 'number');
+
+//working with Objects
+console.log("Working with Objects");
+data = 
+{
+    name: 'kiwi',
+    weight: 76,
+    'unit of weight': 'g',
+    price: 3.5,
+    currency: 'USD',//USD, EUR, GBP, INR
+};
+console.log(data);
+let dataArray = Object.entries(data);
+console.log(dataArray);
+let key = 'sector';
+let value = "a-6";
+
+data.sectorr = "ab-25";
+data[key] = value;
+// console.log(data);
+data = {};
+data['foo'] = 'bar';
+
