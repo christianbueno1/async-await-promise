@@ -107,3 +107,59 @@ data[key] = value;
 data = {};
 data['foo'] = 'bar';
 
+//Callbacks examples
+//Async javascript, working with callbacks, youtube Dev-Ed
+console.log('Async javascript, working with callbacks');
+
+console.log('start');
+
+function foo1(message, callback){
+    setTimeout(() => {
+        let m = message.toUpperCase();
+        callback(m);
+    }, 3000);
+}
+function foo2(fullName, callback) {
+    setTimeout(() => {
+        console.log("foo2, after 6 seconds");
+        // let newName = fullName.replace(/d|m/g, c => c.toUpperCase());
+        // let newName = fullName.replace(/diego/, 'Diego');
+        let nameSplit = fullName.split(" ");
+        let resultSplit = nameSplit.map(s => {
+            let firstLetter = s[0].toUpperCase();
+            let rest = s.slice(1);
+            let result = firstLetter.concat(rest);
+            return result;
+        });
+        let newName = resultSplit.join(" ");
+        callback(newName);
+    }, 6000);
+}
+
+
+
+foo1('hello from foo1', message =>{
+    console.log(message);
+    foo2('diego maradona today monday linux macos windows10', name => {
+        console.log(name);
+    });
+});
+
+
+console.log('end');
+
+
+//callback, freecodecamp
+const message = function() {
+    console.log("message after 2 seconds");
+};
+setTimeout(message, 2000);
+
+//anonymous function
+setTimeout(function() {
+    console.log("Anonymous function, after 4 seconds");
+}, 4000);
+//Arrow function
+setTimeout(() => {
+    console.log("Arrow function, after 5 seconds");
+}, 5000);
