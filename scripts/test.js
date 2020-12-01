@@ -1,5 +1,6 @@
 let myMessage = 'hello my friends, today is a new day';
 let mySplit = myMessage.split(" ");
+
 console.log(mySplit.length);
 console.log(myMessage[0]);
 console.log(myMessage[myMessage.length -1]);
