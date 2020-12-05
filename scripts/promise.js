@@ -37,3 +37,4 @@ loginUser('miwi@lenovo.com', '123')
 .then(videos => videoDetails(videos[0]))
 .then(detail => console.log(detail));
 
+let kiwi = 'testing kiwi';
