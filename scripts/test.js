@@ -22,3 +22,21 @@ let resultM = mySplit.map(s => {
 console.log(resultM);
 let oneR = resultM.join(' ');
 console.log(oneR);
+
+console.log('2020-12-07');
+//synchronous
+console.log('clicke here');
+console.log('sending data');
+console.log('processing');
+console.log('receiving data');
+//asynchronous
+function myOperation() {
+    console.log('task 1 is ready now');
+}
+console.log('click here again');
+setTimeout(myOperation, 2000);
+console.log('second task');
+console.log('third task');
+console.log('end');
+
+console.log('test one')
